@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "67497939116",
+    "firebase_url": "https://your-doctor-f9a6e.firebaseio.com",
+    "project_id": "your-doctor-f9a6e",
+    "storage_bucket": "your-doctor-f9a6e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:67497939116:android:59f3ef06765e796ab98f09",
+        "android_client_info": {
+          "package_name": "com.imposters.yourdoctor"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "67497939116-l2k0d8115n82a6qq65uqjdocum8gkvk3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfJg0GcOxsOHs6Iv1gIskxC8lS2S5D-dE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "67497939116-l2k0d8115n82a6qq65uqjdocum8gkvk3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

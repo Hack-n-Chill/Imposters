@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Your Doctor</string>
+    <string name="nav_header_title">Your Doctor</string>
+    <string name="nav_header_subtitle">Team Imposters</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="new_user_sign_up_here">New User? Sign Up here.</string>
+    <string name="name">Name</string>
+    <string name="tab">Tab</string>
+    <string name="email_address">Email Address</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="preferences">Symptoms</string>
+    <string name="log_out">Log Out</string>
+</resources>
