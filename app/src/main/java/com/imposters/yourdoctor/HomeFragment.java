@@ -80,7 +80,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                     Story story = dataSnapshot1.getValue(Story.class);
                     final View s = layoutInflater.inflate(R.layout.story,null);
                     TextView tv1=s.findViewById(R.id.history);
-                    tv1.setText(story.disease);
+                    String x=story.disease;
+                    tv1.setText(x.substring(0,x.indexOf('|')));
                     linearLayout.addView(s);
                 }
             }
