@@ -51,6 +51,7 @@ public class Assessment extends AppCompatActivity implements View.OnClickListene
         atv.setThreshold(0);
         atv.setOnItemClickListener(this);
         btn=findViewById(R.id.detect);
+        btn.setOnClickListener(this);
     }
 
     @SuppressLint("SetTextI18n")
@@ -67,6 +68,7 @@ public class Assessment extends AppCompatActivity implements View.OnClickListene
             }
         }
         if(v==btn){
+            Toast.makeText(getApplicationContext(), "Detection Backend Under Progress", Toast.LENGTH_SHORT).show();
             //TODO POST REQUEST
         }
     }

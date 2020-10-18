@@ -94,6 +94,10 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
         t1=root.findViewById(R.id.tab1);
         t1.setOnClickListener(this);
+        t2=root.findViewById(R.id.tab2);
+        t2.setOnClickListener(this);
+        t3=root.findViewById(R.id.tab3);
+        t3.setOnClickListener(this);
         return root;
     }
 
@@ -101,6 +105,12 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         if(v == t1){
             startActivity(new Intent(getContext(), Assessment.class));
+        }
+        if(v ==t2){
+            startActivity(new Intent(getContext(),Consult.class));
+        }
+        if(v==t3){
+            Toast.makeText(getContext(),"Development Under Progress!!",Toast.LENGTH_SHORT).show();
         }
     }
 }
