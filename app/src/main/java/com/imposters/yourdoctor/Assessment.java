@@ -18,6 +18,10 @@ import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.chaquo.python.PyObject;
+import com.chaquo.python.Python;
+import com.chaquo.python.android.AndroidPlatform;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -33,6 +37,8 @@ public class Assessment extends AppCompatActivity implements View.OnClickListene
     LayoutInflater layoutInflater;
     TableLayout tableLayout;
     ScrollView scrollView;
+    Python python;
+    PyObject pyobj,obj;
     String[] d=new String[]{"Fungal infection", "itching", "skin rash", "nodal skin eruptions", "dischromic patches", "Allergy", "continuous sneezing", "shivering", "chills", "watering from eyes", "GERD", "stomach pain", "acidity", "ulcers on tongue", "vomiting", "cough", "chest pain", "Chronic cholestasis", "yellowish skin", "nausea", "loss of appetite", "abdominal pain", "yellowing of eyes", "Drug Reaction", "burning micturition", "spotting  urination", "Peptic ulcer diseae", "passage of gases", "internal itching", "indigestion", "AIDS", "muscle wasting", "patches in throat", "high fever", "extra marital contacts", "Diabetes ", "fatigue", "weight loss", "restlessness", "lethargy", "irregular sugar level", "blurred and distorted vision", "obesity", "excessive hunger", "increased appetite", "polyuria", "Gastroenteritis", "sunken eyes", "dehydration", "diarrhoea", "Bronchial Asthma", "breathlessness", "family history", "mucoid sputum", "Hypertension ", "headache", "dizziness", "loss of balance", "lack of concentration", "Migraine", "stiff neck", "depression", "irritability", "visual disturbances", "Cervical spondylosis", "back pain", "weakness in limbs", "neck pain", "Paralysis (brain hemorrhage)", "weakness of one body side", "altered sensorium", "Jaundice", "dark urine", "Malaria", "sweating", "muscle pain", "Chicken pox", "mild fever", "swelled lymph nodes", "malaise", "red spots over body", "Dengue", "joint pain", "pain behind the eyes", "Typhoid", "constipation", "toxic look (typhos)", "belly pain", "hepatitis A", "Hepatitis B", "yellow urine", "receiving blood transfusion", "receiving unsterile injections", "Hepatitis C", "Hepatitis D", "Hepatitis E", "coma", "stomach bleeding", "acute liver failure", "Alcoholic hepatitis", "swelling of stomach", "distention of abdomen", "history of alcohol consumption", "fluid overload", "Tuberculosis", "phlegm", "blood in sputum", "Common Cold", "throat irritation", "redness of eyes", "sinus pressure", "runny nose", "congestion", "loss of smell", "Pneumonia", "fast heart rate", "rusty sputum", "Dimorphic hemmorhoids(piles)", "pain during bowel movements", "pain in anal region", "bloody stool", "irritation in anus", "Heart attack", "Varicose veins", "cramps", "bruising", "swollen legs", "swollen blood vessels", "prominent veins on calf", "Hypothyroidism", "weight gain", "cold hands and feets", "mood swings", "puffy face and eyes", "enlarged thyroid", "brittle nails", "swollen extremeties", "abnormal menstruation", "Hyperthyroidism", "muscle weakness", "Hypoglycemia", "anxiety", "slurred speech", "palpitations", "drying and tingling lips", "Osteoarthristis", "knee pain", "hip joint pain", "swelling joints", "painful walking", "Arthritis", "movement stiffness", "(vertigo) Paroymsal  Positional Vertigo", "spinning movements", "unsteadiness", "Acne", "pus filled pimples", "blackheads", "scurring", "Urinary tract infection", "bladder discomfort", "foul smell of urine", "continuous feel of urine", "Psoriasis", "skin peeling", "silver like dusting", "small dents in nails", "inflammatory nails", "Impetigo", "blister", "red sore around nose", "yellow crust ooze"};
     Button btn;
     List<String> symptom=new ArrayList<>();
@@ -52,6 +58,13 @@ public class Assessment extends AppCompatActivity implements View.OnClickListene
         atv.setOnItemClickListener(this);
         btn=findViewById(R.id.detect);
         btn.setOnClickListener(this);
+        if (!Python.isStarted()) {
+            Python.start(new AndroidPlatform(this));
+        }
+        python=Python.getInstance();
+        //pyobj = python.getModule("script");
+        obj=null;
+
     }
 
     @SuppressLint("SetTextI18n")
@@ -68,8 +81,8 @@ public class Assessment extends AppCompatActivity implements View.OnClickListene
             }
         }
         if(v==btn){
-            Toast.makeText(getApplicationContext(), "Detection Backend Under Progress", Toast.LENGTH_SHORT).show();
-            //TODO POST REQUEST
+            //obj=pyobj.callAttr("predict");
+            //Toast.makeText(this,obj.toString(),Toast.LENGTH_SHORT).show();
         }
     }
 

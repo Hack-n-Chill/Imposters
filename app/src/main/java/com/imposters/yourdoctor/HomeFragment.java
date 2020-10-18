@@ -110,7 +110,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             startActivity(new Intent(getContext(),Consult.class));
         }
         if(v==t3){
-            Toast.makeText(getContext(),"Development Under Progress!!",Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(getContext(),Health.class));
         }
     }
 }
